@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ui-bar-f { /*for head*/
+    color:#393E51;
+    background-color:#E9E6C9;
+}
+
+.ui-body-f { /*for content*/
+    color:#000;
+    background-color:#E9E6C9;
+	  border:none;
+    text-align: center;
+}
+
+.ui-btn-f { /*for btn*/
+    font-weight: bold;
+    color:#fff;
+	  border:none;
+    background-color:#CA6144;
+}
+
+.ui-page-theme-f, .ui-panel-theme-f{ /*for page panel*/
+    background-color:#E9E6C9;
+}
