@@ -202,9 +202,8 @@ input[type="button"] {
     border-radius: 6px;
     vertical-align: middle;
     color: #fff;
-    text-shadow: 1px 0 0 #333;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-    background-color: #ff349a;
+    background-color: #c1996c;
 }
 button:disabled,
 input:disabled {
@@ -220,7 +219,7 @@ input[type="button"].dismiss {
     color: #fff;
     text-shadow: 1px 0 0 #333;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-    background-color: #ff1f97;
+    background-color: #c1996c;
 }
 .action-buttons {
 	text-align: center;
@@ -357,7 +356,7 @@ figure {
 	cursor: pointer;
 }
 #singleView a.delete-photo:hover {
-	color: #ff1f97;
+	color: #c1996c;
 }
 .pagination {
 	margin: .5em auto 1em;
@@ -395,7 +394,7 @@ figure {
     background-size: cover;
 }
 .filter:hover {
-	box-shadow: 0 0 12px #f08;
+	box-shadow: 0 0 12px #c1996c;
 }
 .filter:first-of-type {
     background-position: 0 0;
@@ -482,7 +481,7 @@ figure {
 	color: #ffa91f;
 }
 .icon-warning.high-alert::before {
-	color: #ff1f97;
+	color: #c1996c;
 }
 .trash{
 	background: #393939;

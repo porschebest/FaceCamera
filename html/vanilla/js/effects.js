@@ -16,7 +16,7 @@ memphisLayer2.src = 'images/effects/G2.png';
 var deutlichLayer = new Image();
 deutlichLayer.src = 'images/effects/Z.png';
 var deutlichLayer2 = new Image();
-deutlichLayer2.src = 'images/effects/Z2.png';
+deutlichLayer2.src = 'images/effects/T.png';
 
 //健康
 var sumieLayer = new Image();
