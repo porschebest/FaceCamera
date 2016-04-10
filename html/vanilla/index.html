@@ -1,7 +1,9 @@
-<!doctype html>
+<!doctype html5>
 <html>
 <head>
-	<title>Truth Camera</title>
+	<title>拍知天命</title>
+
+
 
 	<meta charset="utf-8">
 
@@ -26,7 +28,7 @@
 
 	<section id="main">
 		<header>
-			<h1>Coremob Camera</h1>
+			<h1>拍知天命</h1>
 		</header>
 
 		<!-- <p id="userAgent" style="font-size:.75rem;white-space: nowrap;"></p> -->
@@ -41,9 +43,10 @@
 		</section>
 
 
-		
+
+
 		<section id="firstrun" class="thumb" hidden>
-			<p>Get started with HTML5!</p>
+			<p>开启算命之旅!</p>
 			<div class="arrow-container"></div>
 		</section>
 
@@ -52,7 +55,7 @@
 	    	</div>
 	    </section>
 
-	    <a style="position:fixed; bottom:50px; right:0; cursor:pointer; color:#aaa;" id="clearDB">Delete DB</a>
+	    <a style="position:fixed; bottom:50px; right:0; cursor:pointer; color:#aaa;" id="clearDB"><img class="trash" src="images/trash.png" height="10%" ></img></a>
 
 	    <nav>
     		<div class="camera" data-icon="&#x235f;" onclick="document.getElementById('camera').click();return false;"></div>
@@ -70,7 +73,7 @@
 		<header>
 			<nav>
 				<a id="dismissSingleView" class="back" data-icon="&#x21a9;" href="index.html"></a>
-				<a id="shareButton" class="share" data-icon="&#x25b2;" href="index.html"><span>Upload to W3C</span></a>
+				<a id="shareButton" class="share" data-icon="&#x25b2;" href="index.html"><span>Upload</span></a>
 			</nav>
 		</header>
 		<div class="swiper-container"></div>
@@ -93,13 +96,13 @@
 					<div class="filter-tag">Normal</div>
 				</div>
 				<div id="fluorescent" class="filter">
-					<div class="filter-tag">Fluorescent</div>
+					<div class="filter-tag">事业</div>
 				</div>
 				<div id="nostalgia" class="filter">
-					<div class="filter-tag">Nostalgia</div>
+					<div class="filter-tag">面相</div>
 				</div>
 				<div id="phykos" class="filter">
-					<div class="filter-tag">Phykos</div>
+					<div class="filter-tag">健康</div>
 				</div>
 				<div id="lotus" class="filter">
 					<div class="filter-tag">Lotus</div>
@@ -114,7 +117,7 @@
 					<div class="filter-tag">Sumie</div>
 				</div>
 				<div id="rockstar" class="filter">
-					<div class="filter-tag">Rock Star</div>
+					<div class="filter-tag">爱情</div>
 				</div>
 			</section>
 
@@ -122,13 +125,23 @@
 			<form id="uploadForm" class="action-buttons" enctype="multipart/form-data" method="post" action="/upload">
 				<input type="button" value="Save in DB" id="saveButton">
 				<input type="button" value="Upload" id="uploadButton">
+				<a href="index.html"><input type="button" value="Home" id=""></a>
 			</form>
+
 		</nav>
 	</section>
 
 	<section id="photoUpload">
 
 	</section>
+
+	<section id="info">
+	   <p><span id="left"></span></p>
+	   <p><span id="top"></span></p>
+	   <p><span id="right"></span></p>
+	   <p><span id="bottom"></span></p>
+	</section>
+
 
 	<script defer src="js/util.js"></script>
 	<script defer src="js/iDB.js"></script>
@@ -137,5 +150,7 @@
 	<script defer src="js/photoFilter.js"></script>
 	<script defer src="js/effects.js"></script>
 	<script defer src="js/main.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
 </body>
 </html>

@@ -6,7 +6,8 @@
  *  W3C Core Mobile Web Platform Community Group
  *  License: -----
  */
- 
+var left;
+var top;
 var CoreMobCamera = (function() {
 
 	var maxFilesize = 1048576 * 3.5; // Max image size is 3.5MB (iPhone5, Galaxy SIII, Lumia920 < 3MB)
@@ -42,6 +43,7 @@ var CoreMobCamera = (function() {
 		openDatabase();
 		checkMediaCaptureSupport();
 		console.log(navigator.userAgent);
+
 	}
 
 	function showUI(uiElem) {
@@ -114,6 +116,19 @@ var CoreMobCamera = (function() {
 		document.getElementById('camera').addEventListener('change', function() {
 			showUI(loader);
 			fileSelected('camera');
+			$.ajaxFileUpload ({
+				 url:'face.php', //你处理上传文件的服务端
+				 secureuri:false, //与页面处理代码中file相对应的ID值
+				 fileElementId:'img',
+				 dataType: 'json', //返回数据类型:text，xml，json，html,scritp,jsonp五种
+				 success: function (data) {
+				 alert(data.file_infor);}});
+			$.getJSON("face.php", data, function(json){
+	       left = $("#left").html(json.left);
+	       $("#top").html(json.top);
+	       $("#right").html(json.right);
+	       $("#bottom").html(json.bottom);
+			 });
 		}, false);
 
 		// Warning Icons
@@ -342,7 +357,6 @@ var CoreMobCamera = (function() {
 				data.photo = blob;
 				callback(data);
 			}, 'image/jpeg');
-			alert("aaaaa");
 		} else { // get Base64 dataurl from canvas, then convert it to Blob
 			var dataUrl = canvas.toDataURL('image/jpeg');
 

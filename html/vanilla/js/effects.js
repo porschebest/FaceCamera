@@ -7,11 +7,15 @@
 // Prepare image-layer effects
 
 var rockstarLayer = new Image();
-rockstarLayer.src = 'images/effects/bokeh-stars.png';
+rockstarLayer.src = 'images/effects/KF_V.png';
+
+var rockstarLayer2 = new Image();
+rockstarLayer2.src = 'images/effects/KF_V.png';
+
 
 
 // Define named effects
- 
+
 var ApplyEffects = {
 	reset: function(img, format) {
 		var f = new PhotoFilter(img, format);
@@ -28,7 +32,7 @@ var ApplyEffects = {
 		// Slightly blurred, with sepia tone
 		var f = new PhotoFilter(img, format);
 		f.filterImage('rgbAdjust', [1.4, 1.2, 1]);
-		f.filterImage('convolute', 
+		f.filterImage('convolute',
 			[ 0.1, 0.1, 0.1,
 			  0.1, 0.1, 0.1,
 			  0.1, 0.1, 0.1 ]
@@ -39,7 +43,7 @@ var ApplyEffects = {
 		// Slightly blurred, with yellow and green saturated
 		var f = new PhotoFilter(img, format);
 		f.filterImage('rgbAdjust', [1, 1.1, 1.1]);
-		f.filterImage('convolute', 
+		f.filterImage('convolute',
 			[ 0.1, 0.1, 0.1,
 			  0.1, 0.1, 0.1,
 			  0.1, 0.1, 0.1 ]
@@ -56,7 +60,7 @@ var ApplyEffects = {
 		// Sharp images with a magenta-meets-purple tint
 		var f = new PhotoFilter(img, format);
 		f.filterImage('rgbAdjust', [1.2, 1, 1.1]);
-		f.filterImage('convolute', 
+		f.filterImage('convolute',
 			[ 0, -1,  0,
 	    	 -1,  5, -1,
 	    	  0, -1,  0 ]
@@ -66,7 +70,7 @@ var ApplyEffects = {
 	deutlich: function(img, format) {
 		// High exposure
 		var f = new PhotoFilter(img, format);
-		f.filterImage('convolute', 
+		f.filterImage('convolute',
 			[ 0, 0, 0,
 	    	  0, 1.3, 0,
 	    	  0, 0, 0 ]
@@ -80,10 +84,25 @@ var ApplyEffects = {
 	},
 	rockstar: function(img, format) {
 		// applying a starry layer
-		alert("Hello! I am an alert box!");
 		var f = new PhotoFilter(img, format);
-		f.applyLayer(rockstarLayer);
+		f.applyLayer(rockstarLayer, rockstarLayer2);
 		f.render();
+
 	}
+
+
+
+//    var ctx=new Img();
+//	ctx.src='images/effects/KF_V.png';
+//	ctx.fillRect(50,50,50,10);
+//	ctx.globalCompositeOperation=gco[n];
+//	ctx.beginPath();
+//	ctx.fillStyle="red";
+//	ctx.arc(50,50,30,0,2*Math.PI);
+//	ctx.fill();
+//  var c=document.getElementById("myCanvas");
+//    f.applyLayer(ctx);
+//    f.render();
+//  }
 
 };
